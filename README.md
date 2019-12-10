@@ -24,6 +24,8 @@ CSS框架：Bootstrap
 
 ####安装
 下载源码，执行sql文件，然后修改application-dev.yml文件中连接数据库的用户名、密码。运行项目即可。
+或者下载jar包 运行 java -jar xxx.jar
+
 sql文件地址：src/resources/test.sql
 
 访问地址：http://localhost:8888

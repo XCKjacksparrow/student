@@ -1,0 +1,48 @@
+.top-banner{
+    background-color: #00a0d8;
+    height: 86px;
+    margin-bottom: 20px;
+}
+.title-line{
+    width: 980px;
+    height: 28px;
+    margin: 0 auto;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    margin-bottom: 28px;
+}
+.tit{
+    height: 56px;
+    line-height: 56px;
+    margin: 0 auto;
+    padding: 0 20px;
+    background-color: #fff;
+}
+.leftImg{
+    width: 200px;
+    margin-top: 100px;
+    margin-left: 200px;
+}
+.loginForm{
+    margin-top: 100px;
+}
+.line{
+    height: 300px;
+    border-right: 1px solid #ddd;
+}
+footer{
+    background-color: #f6f9fa;
+}
+
+
+
+/***************************************************************************************************以下是success页面
+ */
+
+header{
+    height: 200px;
+    background: url(/img/banner.jpg) no-repeat;
+}
+.content{
+    margin-top: 70px;
+}

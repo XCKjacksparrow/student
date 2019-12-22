@@ -1,4 +1,4 @@
-#Student
+# Student
 ##学生成绩管理系统
 Student是由Springboot2.x + Jpa + Thymeleaf等技术实现的管理网站，如果觉得项目不错，欢迎Star
 

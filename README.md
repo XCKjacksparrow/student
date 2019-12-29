@@ -1,9 +1,9 @@
 # Student
 ## 学生成绩管理系统
-Student是由Springboot2.x + Jpa + Thymeleaf + Shiro等技术实现的管理网站，如果觉得项目不错，欢迎Star
+Student是由Springboot2.x + Jpa + Thymeleaf + Shiro + Redis等技术实现的管理网站，如果觉得项目不错，欢迎Star
 
 ### 适用对象
-1.Spring Boot 初学者。该系统综合运用了作者 kazemi.cn 博客中的的文章提及的知识内容，初学者可以阅读文章以及结合该项目学习。
+1.Spring Boot 初学者。该系统综合运用了作者 [kazemi.cn]() 博客中的的文章提及的知识内容，初学者可以阅读文章以及结合该项目学习。
 
 2.懵懂者。初次接触Springboot的人。
 
@@ -46,3 +46,6 @@ sql文件地址：src/resources/test.sql
 整合shiro
 已做登录认证
 暂未做权限认证
+
+2019-12-28
+整合Redis

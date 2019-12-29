@@ -58,18 +58,4 @@ public class LoginController {
     }
 
 
-    @RequestMapping("/testThymeLeaf")
-    public String testThymeLeaf(Model model){
-        model.addAttribute("name","kazemi");
-        return "testThymeLeaf";
-    }
-
-    @RequestMapping("/user/add")
-    public String userAdd(){
-        return "user/add";
-    }
-    @RequestMapping("/user/update")
-    public String userUpdate(){
-        return "user/update";
-    }
 }

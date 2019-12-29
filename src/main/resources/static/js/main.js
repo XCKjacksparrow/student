@@ -14,7 +14,7 @@ function getFirstPage() {               // 选取首页5个记录
         url:"/student/getPage/1",
         type:"get",
         success:function(result){
-            // console.log(result);
+            console.log(result);
             var tbody = $("tbody");
             for (var i = 0; i < result.length; i++){
                 // console.log(result[i]);//id firstName,lastName,userName,score
@@ -184,7 +184,7 @@ function addEvents(){
         var userName = $("#userName").val();
         var score = $("#score").val();
         $.ajax({
-            url:"/student/add",
+            url:"/student/addOrUpdate",
             type:"post",
             data:{
                 firstName:firstName,
@@ -217,7 +217,7 @@ function addEvents(){
         var userName = $("#muserName").val();
         var score = $("#mscore").val();
         $.ajax({
-            url:"/student/add",
+            url:"/student/addOrUpdate",
             type:"post",
             data:{
                 id:id,

@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import per.xck.student.entity.Student;
 import per.xck.student.reposiory.StudentRepository;
+import per.xck.student.service.StudentService;
 
 import java.util.List;
 
@@ -14,29 +15,24 @@ public class StudentController {
     @Autowired
     StudentRepository studentRepository;
 
+    @Autowired
+    StudentService studentService;
+
     @GetMapping("/student/getPage/{page}")
     @ResponseBody
     public List<Student> getPage(@PathVariable("page") Integer page){
-        page = (page-1) * 5;
-        List<Student> students = studentRepository.getPage(page);
-        return students;
+        return studentService.getPage(page);
     }
 
     @ResponseBody
     @GetMapping("/student/getPagination")
     public Integer getPagination(){                 // 返回页数
-        Integer counts = Math.toIntExact(studentRepository.count());    // 总人数
-//        System.out.println(counts);
-        if (counts % 5 == 0){
-            return counts / 5;
-        }else {
-            return counts / 5 + 1;
-        }
+        return studentService.getPagination();
     }
 
-    @PostMapping("/student/add")
+    @PostMapping("/student/addOrUpdate")
     @ResponseBody
-    public String addStudent(@RequestParam(name = "id",required = false) Integer id,
+    public String addOrUpdateStudent(@RequestParam(name = "id",required = false) Integer id,
                              @RequestParam("userName") String userName,
                              @RequestParam("firstName") String firstName,
                              @RequestParam("lastName") String lastName,
@@ -49,15 +45,14 @@ public class StudentController {
         student.setLastName(lastName);
         student.setUserName(userName);
         student.setScore(score);
-        studentRepository.saveAndFlush(student);
-
+        studentService.addOrUpdateStudent(student);
         return "success";
     }
 
     @RequestMapping("/student/delete/{id}")
     @ResponseBody
     public String delete(@PathVariable("id") Integer id){
-        studentRepository.deleteById(id);
+        studentService.deleteById(id);
         return "success";
     }
 }
